@@ -40,8 +40,8 @@ The App component will be the top-level component of your application and should
 responsible for making requests to the API and updating the data after the fact. It should
 control which of the other components is currently being viewed through conditional rendering
 and be the single source of truth for any data retrieved from the API.
-Requirements
 
+***Requirements***
 1. API Requests to JSON Server should be made inside the App component
 a. See JSON Server Tutorial Video in Moodle
 b. See API Requests in React Video in Moodle
@@ -60,8 +60,7 @@ do, in progress, review, and done). The component should display all tasks in a 
 sorted into their appropriate columns. The Board should also have the ability to move a
 card/task from one column to another
 
-Requirements
-===
+***Requirements***
 1. Display all of the tasks in columns sorted by their status.
 a. See Working with Lists in React Video in Moodle
 2. Allow for the ability to move a task between columns. Task should stay in it’s new
@@ -82,8 +81,7 @@ this one should be created in React. It should display all the tasks in a table 
 with all of its data displayed. The list should be able to be filtered by Column/Status and Type as
 well as sorted by all of the task’s properties.
 
-Requirements
-===
+***Requirements***
 1. Display all of the tasks in a list or table with all of the its properties displayed
 a. See Working with Lists in React Video in Moodle
 2. Be able to sort the list by Title, Status/Column, and Type.
@@ -101,8 +99,7 @@ application can see the new Task until a hard refresh (when the API is called ag
 data is lost). Upon Submitting the form, the user should be taken to the Board or List view
 where they’ll see their newly added Task.
 
-Requirements
-===
+***Requirements***
 1. A form that takes a Title and Type for your new task (should default column to todo).
 a. See Working with Forms in React Video in Moodle
 2. When the form is submitted, the App component should be the one that adds it to the array of
