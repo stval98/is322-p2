@@ -19,6 +19,7 @@ pull data from, you can use mine or create your own (see JSON Server Tutorial vi
 You do not need a full back-end server for this assignment.
 
 General Requirements
+===
 1. All code must be in GitHub, and the website should be publicly accessible from at least
 one of your group members AFS web spaces or a web hosting platform of your choice
 (ex. Heroku, Digital Ocean, AWS). Both links will be required.
@@ -34,6 +35,7 @@ e. 411px wide (Phone)
 3. Styling and UI Design will NOT be graded on this project, though I will provide feedback.
 
 Part 1: App Component (Required for All)
+===
 The App component will be the top-level component of your application and should be
 responsible for making requests to the API and updating the data after the fact. It should
 control which of the other components is currently being viewed through conditional rendering
@@ -52,13 +54,14 @@ viewed through conditional rendering
 a. See Conditional Rendering Video in Moodle
 
 Part 2: Task Board Component (Required for All)
-
+===
 The Task Board will allow the user to see all of the tasks sorted into columns by their status (to
 do, in progress, review, and done). The component should display all tasks in a card like UI,
 sorted into their appropriate columns. The Board should also have the ability to move a
 card/task from one column to another
 
 Requirements
+===
 1. Display all of the tasks in columns sorted by their status.
 a. See Working with Lists in React Video in Moodle
 2. Allow for the ability to move a task between columns. Task should stay in it’s new
@@ -73,13 +76,14 @@ and transmitted to the TaskBoard via props.
 a. See Managing Data between Parent and Child video in Moodle
 
 Part 3: Task List Component (Two People, Choose One. Three People, Required)
-
+===
 The task list component should operate very similar to the filtered lists we’re done before, but
 this one should be created in React. It should display all the tasks in a table or list of some kind
 with all of its data displayed. The list should be able to be filtered by Column/Status and Type as
 well as sorted by all of the task’s properties.
 
 Requirements
+===
 1. Display all of the tasks in a list or table with all of the its properties displayed
 a. See Working with Lists in React Video in Moodle
 2. Be able to sort the list by Title, Status/Column, and Type.
@@ -89,7 +93,7 @@ Type, with a drop down include for each option.
 a. See Working with Lists in React Video in Moodle
 
 Part 4: Add Task Component (Two People, Choose One. Three People, Required)
-
+===
 The Add Task Form component should be able to mock adding a task to the database. Since we
 don’t have a proper API, we won’t be sending a POST request like we normally would. Instead
 we’ll just update the state variables on the App component so any other component in the
@@ -98,6 +102,7 @@ data is lost). Upon Submitting the form, the user should be taken to the Board o
 where they’ll see their newly added Task.
 
 Requirements
+===
 1. A form that takes a Title and Type for your new task (should default column to todo).
 a. See Working with Forms in React Video in Moodle
 2. When the form is submitted, the App component should be the one that adds it to the array of
