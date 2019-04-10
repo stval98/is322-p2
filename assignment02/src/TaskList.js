@@ -10,10 +10,10 @@ class TaskList extends React.Component {
 		let taskList = this.props.tasks;
 		taskList.splice(taskIndex, 1);
 		console.log(this.props);
-		this.props.onUpdateTaskList(taskList);
+		this.props.onUpdate(taskList);
 	}
 	
-	// render content
+	// map items in array and render content in index.js -> index.html
 	render() {
 		const taskItems = this.props.tasks.map(task => {
 			return <TaskItem task={task} key={task.id} markDone={this.markDone} />

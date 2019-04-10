@@ -3,6 +3,7 @@ import React from 'react';
 
 class AddTask extends React.Component{
 	
+	// default state
 	state = { newTask: '' }
 	
 	// add new task when user submits input
@@ -13,7 +14,7 @@ class AddTask extends React.Component{
 		this.setState({ newTask: '' })
 	}
 	
-	// render content
+	// render content in index.js -> index.html
 	render() {
 		return (
 		  <form className="task-input form-group" onSubmit={this.onFormSubmit}>

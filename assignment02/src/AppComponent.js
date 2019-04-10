@@ -1,6 +1,6 @@
 // import dependencies
 import React from 'react';
-import axios from 'axios'; //GET HELP DOWNLOADING
+import axios from 'axios';
 import TaskList from './TaskList';
 import AddTask from './AddTask';
 
@@ -24,9 +24,10 @@ class AppComponent extends React.Component{
 	getData(){
 		axios.get('https://my-json-server.typicode.com/stval98/is322-p2')
 		.then(response => {this.setState({ tasks: response.data });})
-		.catch(error => {this.setState({ errorMsg: response.message });});
+		.catch(response => {this.setState({ errorMsg: response.message });});
 	}
 	
+	// adds new task to task list
 	onAddTask = (taskName) => {
 		let tasks = this.state.tasks;
 		tasks.push({
@@ -38,11 +39,12 @@ class AppComponent extends React.Component{
 		this.setState({ tasks });
 	}
 	
+	// sets task list to new task list when list is updated
 	onUpdateTaskList = (newTaskList) => {
 		this.setState({tasks: newTaskList});
 	}
 	
-	// render content
+	// render content in index.js -> index.html
 	render(){
 		return (
 			<div className='container'>

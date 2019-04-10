@@ -1,6 +1,7 @@
 // import dependencies
 import React from 'react';
 
+// JSX code to be rendered for each task item in task list
 const TaskItem = props => {
   return (
     <li className="list-group-item">
