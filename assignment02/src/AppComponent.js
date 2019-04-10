@@ -22,7 +22,7 @@ class AppComponent extends React.Component{
 	}
 	
 	getData(){
-		axios.get('https://my-json-server.typicode.com/stval98/is322-p2')
+		axios.get('https://my-json-server.typicode.com/stval98/is322-p2/posts')
 		.then(response => {this.setState({ tasks: response.data });})
 		.catch(response => {this.setState({ errorMsg: response.message });});
 	}
