@@ -9,10 +9,22 @@ const TaskItem = props => {
       <button type="button"
              onClick={() => props.markDone(props.task)}
              className="btn btn-primary" style={{ float: 'right' }}>
-        Done
-        </button>
-    </li>
-  )
+        Done 
+        </button> 
+        <button type="button"
+                        onClick={() => props.markInProgress(props.task)}
+                        className="btn btn-primary" style={{ float: 'right' }}>
+                    InProgress
+                </button>
+                <button type="button"
+                        onClick={() => props.markToDo(props.task)}
+                        className="btn btn-primary" style={{ float: 'right' }}>
+                    To Do
+                </button> 
+            </li>
+            </body>
+        </div>
+    )
 };
 
 // export component
