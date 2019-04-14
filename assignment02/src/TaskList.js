@@ -12,20 +12,47 @@ class TaskList extends React.Component {
 		console.log(this.props);
 		this.props.onUpdateTaskList(taskList);
 	}
-	
+	markInProgress = (task) => {
+        const taskIndex = this.props.tasks.findIndex(t => t.id === task.id);
+        let taskList = this.props.tasks;
+        task.splice(taskIndex, 2);
+        console.log(this.props);
+        this.props.onUpdateTaskList(taskList);
+    }
+
+    markToDo = (task) => {
+        const taskIndex = this.props.tasks.findIndex(t => t.id === task.id);
+        let taskList = this.props.tasks;
+        task.splice(taskIndex, 3);
+        console.log(this.props);
+        this.props.onUpdateTaskList(taskList);
+    }
+
 	// map items in array and render content in index.js -> index.html
 	render() {
 		const taskItems = this.props.tasks.map(task => {
 			return <TaskItem task={task} key={task.id} markDone={this.markDone} />
 		});
+        const ItemList = this.props.tasks.map(task => {
+            if(task.column=="in-progress")
+                return <ItemList task={task} key={task.id} markToDo={this.markToDo} markDone={this.markDone} markInProgress={this.markInProgress}/>
+        });
 
-		return (
-			<ul className="task-list list-group">
-			{ taskItems }
-			</ul>
-		)
-	}
+
+
+        return (
+            <ul className="taskList">
+                {"Done"}
+                { taskItems }
+                {"In Progress"}
+                {listItem}
+                {"To Do"}
+                {listItem2}
+            </ul>
+        )
+    }
 }
+
 
 // export component
 export default TaskList;
