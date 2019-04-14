@@ -1,6 +1,7 @@
 // import dependencies
 import React from 'react';
 import TaskItem from './TaskItem';
+import ItemList from '.ItemList'; 
 
 class TaskList extends React.Component {
 	
@@ -38,6 +39,15 @@ class TaskList extends React.Component {
                 return <ItemList task={task} key={task.id} markToDo={this.markToDo} markDone={this.markDone} markInProgress={this.markInProgress}/>
         });
 
+        });
+        const ItemList = this.props.tasks.map(task => {
+            if(task.column=="todo")
+                return <ItemList task={task} key={task.id} markToDo={this.markToDo} markDone={this.markDone} markInProgress={this.markInProgress}/>
+        });
+
+
+
+
 
 
         return (
@@ -45,9 +55,9 @@ class TaskList extends React.Component {
                 {"Done"}
                 { taskItems }
                 {"In Progress"}
-                {listItem}
+                {ItemList}
                 {"To Do"}
-                {listItem2}
+                {ItemList}
             </ul>
         )
     }
