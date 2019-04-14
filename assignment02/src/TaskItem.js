@@ -4,6 +4,8 @@ import React from 'react';
 // JSX code to be rendered for each task item in task list
 const TaskItem = props => {
   return (
+    <div className="Tasks"> 
+    <body> 
     <li className="list-group-item">
       { props.task.title }
       <button type="button"
