@@ -2,6 +2,7 @@
 import React from 'react';
 import TaskItem from './TaskItem';
 import ItemList from '.ItemList'; 
+import ItemList1 from '.ItemList1'; 
 
 class TaskList extends React.Component {
 	
@@ -40,9 +41,9 @@ class TaskList extends React.Component {
         });
 
         });
-        const ItemList = this.props.tasks.map(task => {
+        const ItemList1 = this.props.tasks.map(task => {
             if(task.column=="todo")
-                return <ItemList task={task} key={task.id} markToDo={this.markToDo} markDone={this.markDone} markInProgress={this.markInProgress}/>
+                return <ItemList1 task={task} key={task.id} markToDo={this.markToDo} markDone={this.markDone} markInProgress={this.markInProgress}/>
         });
 
 
@@ -57,7 +58,7 @@ class TaskList extends React.Component {
                 {"In Progress"}
                 {ItemList}
                 {"To Do"}
-                {ItemList}
+                {ItemList1}
             </ul>
         )
 	}
