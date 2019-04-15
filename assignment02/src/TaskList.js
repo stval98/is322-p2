@@ -60,8 +60,9 @@ class TaskList extends React.Component {
                 {ItemList}
             </ul>
         )
-    }
-}
+	}
+					   
+					    
 
 
 // export component
