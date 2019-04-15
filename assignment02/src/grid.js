@@ -6,12 +6,12 @@ import TaskItem from './TaskItem';
 import ItemList from '.ItemList'; 
 import ItemList1 from '.ItemList1'; 
 
-class GridView extends React.Component {
+class grid extends React.Component {
 
     constructor(props) { 
         super(props); 
         this.state = {
-            FilteredTasks:props.tasks
+           let filteredTasks = this.props.tasks; 
         };
     }
     
@@ -33,7 +33,7 @@ class GridView extends React.Component {
         this.props.onUpdateTaskList(taskList);
     };
 render() {
-        const taskItems = this.props.tasks.map(task => {
+        const ItemList = this.props.tasks.map(task => {
             return <TaskItem task={task} key={task.id} markDone={this.markDone} />
         });
         const ItemList = this.props.tasks.map(task => {
@@ -58,7 +58,7 @@ render() {
 
                 <div className="column" style="background-color:gray">
                                 <div className="card-title">
-                                <h2>To Do</h2>
+                                <h2>In Progress </h2>
                             </div>
                             {ItemList1}
                         </div>
@@ -77,5 +77,5 @@ render() {
     }
 }
 
-export default GridView;
+export default grid;
    
